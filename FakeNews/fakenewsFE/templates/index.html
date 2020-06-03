@@ -1,0 +1,102 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>News Classifier</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css"/>
+     <link rel="stylesheet" href="{% static 'css/form.css' %}" type="text/css"/>
+      <link rel="stylesheet" href="{% static 'css/utils.css' %}" type="text/css"/>
+<style>
+    input[type=submit] {
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+
+    }
+    input[type=text] {
+    width: 180px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: white;
+
+
+    padding: 12px 20px 12px 20px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 50%;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('{% static 'fonts/Roboto.ttf' %}');
+
+  }
+
+
+    </style>
+</head>
+<body id="bg" style="background-image: url('{% static "images/one.png"%}' )";>
+
+<nav class="navbar navbar-light bg-dark">
+  <span class="navbar-brand mb-0 h1"style="color:white;">Fake News Classifier</span>
+</nav>
+ <br><br>
+
+<font face="Roboto">  <h3 align='middle' style="color:black;">Welcome to Fake News Classifier</h3></font>
+  <font face="Roboto"><p align='middle' style="font-size:20px;color:black;"></p>
+
+   
+
+
+
+  <br><br><br>
+  
+  <form align='middle' method="Post"class="contact100-form validate-form">
+      {% csrf_token %}
+      	<div data-validate="Please enter your name">
+					<input  type="text" name="Article" placeholder="Article To Classify">
+					<span class="focus-input100"></span>
+				</div>
+
+
+	<div class="container-contact100-form-btn">
+<input type="submit" name="ArticleS" value="Article"class="contact100-form-btn" >
+	</div>
+
+
+
+
+	<div data-validate="Please enter your name">
+					<input  type="text"  name="Website" placeholder="Specify http/https">
+					<span class="focus-input100"></span>
+				</div>
+<div class="container-contact100-form-btn">
+<input type="submit" name="WebsiteS" value="Website" class="contact100-form-btn">
+	</div>
+
+
+<font face="Roboto">  <h4 align='middle' style="color:black;">Check the authenticity of article and web pages that you see</h4></font>
+</form>
+
+
+<br><br><br>
+
+
+
+
+
+
+  </div>
+</body>
+</html>

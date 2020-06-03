@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+      <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css"/>
+       <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css"/>
+     <link rel="stylesheet" href="{% static 'css/form.css' %}" type="text/css"/>
+      <link rel="stylesheet" href="{% static 'css/utils.css' %}" type="text/css"/>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+      <style>
+      @font-face {
+          font-family: 'Roboto';
+          src: url('{% static 'fonts/Roboto.ttf' %}');
+        }
+      </style>
+</head>
+
+<body id="bg" style="background-image: url('{% static "images/bg2.jpg"%}')";>
+
+ <nav class="navbar navbar-light bg-dark">
+  <span class="navbar-brand mb-0 h1"style="color:white;">Fake News Classifier</span>
+</nav>
+  	<div class="container-contact100">
+		<div class="contact100-map" id="google_map" data-map-x="40.722047" data-map-y="-73.986422" data-pin="images/icons/map-marker.png" data-scrollwhell="0" data-draggable="1"></div>
+
+		<div class="wrap-contact100">
+			<form class="contact100-form validate-form">
+			
+<font face="Roboto">  <h3 style="font-weight:bold;color:red">Predicted Output</h3></font>
+    <hr>
+<font face="Roboto"><h3>  {{ output }}</h3></font>
+
+<br>
+
+					<div class="contact100-more">
+				 <font face="Roboto"><h3><a href="{% url 'index' %}" >Home Page</a></h3></font>
+			</div>
+
+			</form>
+
+		
+		</div>
+	</div>
+
+
+
+
+
+ <div style=" position: fixed;
+    text-align: center;
+
+    bottom: 20px;
+    width: 100%;">
+   
+ </div>
+</body>
+</html>
